@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi-Regular', sans-serif;
+    background-color: #fcfcfc;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* TITULU NAGUSIA*/
+h1 {
+    font-family: 'Iroulegu', sans-serif;
+    text-align: center;
+    font-size: 5rem; 
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* 3. JAVASCRIPT BOTOIAK (FILTROAK) */
+.filtroak {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filtroak button {
+    background-color: transparent;
+    border: 2px solid #FA402C; 
+    color: #FA402C;
+    padding: 10px 25px;
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filtroak button:hover, 
+.filtroak button.aktiboa {
+    background-color: #FA402C;
+    color: white;
+}
+
+/* EDUKIA */
+.edukia {
+    max-width: 950px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+    min-height: 60vh;
+}
+
+/* 5. EGUTEGIAREN DISEINUA */
+.egutegia {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.eguna {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    transition: all 0.4s ease; 
+}
+
+.eguna:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* EZKERRALDEKO DATA */
+.data-kutxa {
+    background-color: #FA402C;
+    color: #ffffff;
+    min-width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.data-kutxa .zenbakia {
+    font-family: 'Iroulegu', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.data-kutxa .hilabetea {
+    font-family: 'Satoshi-Bold', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+/* ESKUINALDEKO EKINTZAK */
+.ekintzak {
+    padding: 25px 35px;
+    flex-grow: 1;
+}
+
+.ekintza-lerroa {
+    display: flex;
+    padding: 18px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.ekintza-lerroa:last-child {
+    border-bottom: none;
+}
+
+.ordua {
+    font-family: 'Satoshi-Bold', sans-serif;
+    color: #FA402C;
+    min-width: 90px;
+    font-size: 1.1rem;
+}
+
+.xehetasunak strong {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #000;
+    font-family: 'Satoshi-Bold', sans-serif;
+}
+
+.xehetasunak p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* 6. RESPONSIVE (Mugikorrerako) */
+@media (max-width: 700px) {
+    h1 { font-size: 3rem; }
+    
+    .eguna { flex-direction: column; }
+    
+    .data-kutxa {
+        flex-direction: row;
+        min-width: auto;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .data-kutxa .zenbakia { font-size: 2.5rem; }
+
+    .filtroak { flex-wrap: wrap; }
+}

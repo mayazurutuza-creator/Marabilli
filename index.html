@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marabilli Festibala</title>
+    
+    <link rel="icon" type="image/png" href="marabilli_img/punteroa.png">
+    <link rel="stylesheet" href="../marabilli/marabilli_css/index.css">
+    <link rel="stylesheet" href="../marabilli/marabilli_css/fonts.css">
+    <link rel="stylesheet" href="../marabilli/marabilli_css/reset.css">
+    <link rel="stylesheet" href="../marabilli/marabilli_css/shop.css">
+    <link rel="stylesheet" href="marabilli_css/footer.css">
+    <link rel="stylesheet" href="marabilli_css/navegador.css">
+    <link rel="stylesheet" href="marabilli_css/egitaraua.css">
+    
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+</head>
+<body class="sarrera-modua">
+
+    <div id="mapa-ontzia"></div>
+
+    <nav class="nabigazio-finkoa">
+        <div class="logo-marka">MARABILLI</div>
+        
+        <button class="hamburguesa" id="btn-hamburguesa" aria-label="Menua ireki">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="menua" id="menu-lista">
+            <li><a href="index.html">HASIERA</a></li>
+            <li><a href="partaideak.html">PARTAIDEAK</a></li>
+            <li><a href="egitaraua.html">EGITARAUA</a></li>
+            <li><a href="shop.html">DENDA</a></li>
+            <li><a href="kontaktuak.html">KONTAKTUAK</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-overlay" id="overlay"></div>
+
+    <main class="eduki-gunea">
+        <header class="hasiera-atala">
+            <div class="hasiera-edukia">
+                <p class="goiburua agertu">EUSKAL ZINEMA ETA SORMEN FESTIBALA</p>
+                <h1 class="izenburu-handia">MARABILLI<br>ZINEMA FESTIBALA</h1>
+                <p class="kokapena-agertu">- ONDARRUN EINDDE -</p>
+            </div>
+        </header>
+
+        <section class="timeline-mugagabea">
+            <div class="topografia-background"></div>
+            <div class="timeline-itsatsia">
+                <div class="timeline-mugimendua">
+                    <div class="canvas-atala">
+                        <div class="big-year-bg">2012</div>
+                        <div class="img-wrapper pos-1 agertu">
+                            <span class="label">BIXITXI MARABILLI RE, 2012</span>
+                            <img src="../marabilli/marabilli_img/aitzolurdiñe.png" alt="Sorrera Aitzol Aramaio">
+                            <h3 class="canvas-title">Jaialdiaren jaiotza: Aitzol Aramaioren omenez.</h3>
+                        </div>
+                    </div>
+                    <div class="canvas-atala">
+                        <div class="img-wrapper pos-2 agertu">
+                            <span class="label">SORMEN PILULAK, 2013</span>
+                            <img src="../marabilli/marabilli_img/10 min.jpg" alt="Unax Ugalde eta Miren Gaztañaga">
+                            <h3 class="canvas-title">Sormen Pilulak: Prozesu sortzailea arakatzen.</h3>
+                        </div>
+                        <div class="img-wrapper pos-4 agertu">
+                            <span class="label">HERRIKO TXOKOAK</span>
+                              <img src="../marabilli/marabilli_img/uopakandastail.jpg" alt="Mikel Urdangarin">
+                            <h3 class="canvas-title">Sormena kaleetan zehar zabalduz.</h3>
+                        </div>
+                    </div>
+                    <div class="canvas-atala">
+                        <div class="img-wrapper pos-3 agertu">
+                            <span class="label">PORTUKO KONTZERTUAK, 2015</span>
+                            <img src="../marabilli/marabilli_img/mikel urdangarin kontzer.jpg" alt="Mikel Urdangarin">
+                             <h3 class="canvas-title">Mikel Urdangarin portuko giroan, Kofradia Zaharrean.</h3>
+                        </div>
+                        <div class="quote-wrapper agertu">
+                            <p class="serif-quote">"Sormena herri baten arima da."</p>
+                            <p class="quote-sub">MARABILLI SORMEN FESTIBALA</p>
+                        </div>
+                    </div>
+                    <div class="canvas-atala">
+                        <div class="big-year-bg">2019</div>
+                        <div class="img-wrapper pos-5 agertu">
+                            <span class="label">MARABILLI FESTIBALA, 2019</span>
+                             <img src="../marabilli/marabilli_img/2019 epa.jpg" alt="Agur Marabilli">
+                            <h3 class="canvas-title">Marabillak sortzen eta amesten.</h3>
+                        </div>
+                    </div>
+                    <div class="canvas-atala">
+                        <div class="img-wrapper pos-6 agertu">
+                            <span class="label">AGUR MARABILLI IRRATIA, 2023</span>
+                            <img src="../marabilli/marabilli_img/agurra.jpg" alt="Agur Marabilli">
+                            <div class="podcast-tag">PODCAST BERRIA</div>
+                            <h3 class="canvas-title">Istorioak ez dira hemen amaitzen.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bfc-testuingurua">
+            <header>
+                <h1 class="titulua">MARABILLI <br>MERCHANDISING</h1>
+                <p class="goiburua">ONDARRUN EINDDE, DENONTZAKO.</p>
+            </header>
+
+            <div class="denda-atala">
+                <div class="produktu-kutxa float-ezkerra">
+                    <div class="produktu-irudia"><img src="marabilli_img/marabilli_kamisetia.png" alt="Kamiseta"></div>
+                    <p class="goiburua">KAMISETA OFIZIALA</p>
+                    <p class="kokapena">25,00€</p>
+                    <button class="erosi-button">GEHITU</button>
+                </div>
+                <div class="produktu-kutxa float-ezkerra">
+                    <div class="produktu-irudia"><img src="marabilli_img/tote bag.png" alt="Totea"></div>
+                    <p class="goiburua">MARABILLI TOTE-BAG</p>
+                    <p class="kokapena">15,00€</p>
+                    <button class="erosi-button">GEHITU</button>
+                </div>
+                <div class="produktu-kutxa float-ezkerra">
+                    <div class="produktu-irudia"><img src="marabilli_img/giltzatakoa.png" alt="giltzatakoa"></div>
+                    <p class="goiburua">GILTZATAKOA</p>
+                    <p class="kokapena">5,90€</p>
+                    <button class="erosi-button">GEHITU</button>
+                </div>
+            </div>
+        </section>
+<br><br><br>
+        <section class="edukia" style="padding: 100px 20px; background: #fcfcfc;">
+            <h1 style="font-family: 'Iroulegu', sans-serif; text-align: center; font-size: 4rem; margin-bottom: 40px;">EGITARAUA 2026</h1>
+
+            <div class="filtroak">
+                <button onclick="iragazi('denak', event)" class="aktiboa">Denak</button>
+                <button onclick="iragazi('15', event)">Urriak 15</button>
+                <button onclick="iragazi('16', event)">Urriak 16</button>
+                <button onclick="iragazi('17', event)">Urriak 17</button>
+            </div>
+
+            <div class="egutegia">
+                <div class="eguna" id="eguna-15">
+                    <div class="data-kutxa">
+                        <span class="zenbakia">15</span>
+                        <span class="hilabetea">URRIA</span>
+                    </div>
+                    <div class="ekintzak">
+                        <div class="ekintza-lerroa">
+                            <span class="ordua">18:30</span>
+                            <div class="xehetasunak">
+                                <strong>Zine-Emanaldia: "Marabillia"</strong>
+                                <p>Bideo-sorkuntza laburrak (Bide Onera)</p>
+                            </div>
+                        </div>
+                        <div class="ekintza-lerroa">
+                            <span class="ordua">22:00</span>
+                            <div class="xehetasunak">
+                                <strong>Aukustikoa: Izaro</strong>
+                                <p>Andra Mari Eliza</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="eguna" id="eguna-16">
+                    <div class="data-kutxa">
+                        <span class="zenbakia">16</span>
+                        <span class="hilabetea">URRIA</span>
+                    </div>
+                    <div class="ekintzak">
+                        <div class="ekintza-lerroa">
+                            <span class="ordua">11:00</span>
+                            <div class="xehetasunak">
+                                <strong>Argazkigintza Tailerra</strong>
+                                <p>Alamedan zehar</p>
+                            </div>
+                        </div>
+                        <div class="ekintza-lerroa">
+                            <span class="ordua">23:00</span>
+                            <div class="xehetasunak">
+                                <strong>Kontzertua: Gatibu</strong>
+                                <p>Itsasaurre Plaza</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="eguna" id="eguna-17">
+                    <div class="data-kutxa">
+                        <span class="zenbakia">17</span>
+                        <span class="hilabetea">URRIA</span>
+                    </div>
+                    <div class="ekintzak">
+                        <div class="ekintza-lerroa">
+                            <span class="ordua">12:30</span>
+                            <div class="xehetasunak">
+                                <strong>Bertso-Bazkaria</strong>
+                                <p>Portuko kaian</p>
+                            </div>
+                        </div>
+                        <div class="ekintza-lerroa">
+                            <span class="ordua">00:00</span>
+                            <div class="xehetasunak">
+                                <strong>DJ Gaua: Amaiera</strong>
+                                <p>Plazapean</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="kutxa">
+            <div class="atala">
+                <h4>NON GAUDE?</h4>
+                <p>&#9906; Aitaren Etxea, Ondarroa<br>Bizkaia, 48700</p>
+            </div>
+            <div class="atala">
+                <h4>KONTAKTUA</h4>
+                <p>&#9993; info@marabillifestibala.eus</p>
+                <p>&#9990; 630 898 689</p>
+            </div>
+            <div class="atala">
+                <h4>SAREAK</h4>
+                <div class="ikurrak">
+                    <a href="https://www.instagram.com/marabillisormenfestibala/?hl=es" target="_blank">&#128247;</a>
+                    <a href="https://www.facebook.com/MarabilliSormenFestibala/?locale=es_ES">&#120125;</a>
+                    <a href="https://x.com/Marabilli1">&#120143;</a>
+                </div>
+            </div>
+        </div>
+        <div class="behea">
+            <p>&copy; 2026 &bull; MARABILLI KULTUR ELKARTEA &bull; ONDARROA</p>
+        </div>
+    </footer>
+
+    <script>
+        // MENUAREN KONTROLA
+        const btnHambu = document.getElementById('btn-hamburguesa');
+        const menuLista = document.getElementById('menu-lista');
+        const overlay = document.getElementById('overlay');
+
+        const toggleMenu = () => {
+            btnHambu.classList.toggle('aktibatuta');
+            menuLista.classList.toggle('irekita');
+            overlay.classList.toggle('irekita');
+        };
+
+        btnHambu.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // EGITARAUAREN IRAGAZKIA
+        function iragazi(eguna, e) {
+            const egunak = document.querySelectorAll('.eguna');
+            egunak.forEach(el => {
+                if (eguna === 'denak') {
+                    el.style.display = 'flex';
+                } else {
+                    el.style.display = el.id.includes(eguna) ? 'flex' : 'none';
+                }
+            });
+            const botoiak = document.querySelectorAll('.filtroak button');
+            botoiak.forEach(btn => btn.classList.remove('aktiboa'));
+            e.currentTarget.classList.add('aktiboa');
+        }
+
+        // MAPA ETA SCROLL LOGIKA (Jatorrizkoa)
+        function saltarMapa() {
+            const m = document.getElementById('mapa-ontzia');
+            if(m) m.style.display = 'none';
+            document.body.classList.remove('sarrera-modua');
+            document.body.classList.add('edukia-ikusgai');
+        }
+
+        if (sessionStorage.getItem('mapaMostrado')) {
+            saltarMapa();
+        } else {
+            mapboxgl.accessToken = 'pk.eyJ1IjoibWF5YXp1cnV0dXphIiwiYSI6ImNtbGdieTlybTA5dzgzZXM5NHk2cTV3ZDMifQ.gpuNzt-nff4YyufU0xJKmQ';
+            const mapa = new mapboxgl.Map({
+                container: 'mapa-ontzia', 
+                style: 'mapbox://styles/mapbox/satellite-v9',
+                projection: 'globe', zoom: 1.5, center: [0, 20], interactive: false
+            });
+            mapa.on('load', () => {
+                setTimeout(() => {
+                    mapa.flyTo({ center: [-2.4214, 43.3218], zoom: 16, pitch: 65, duration: 8000 });
+                }, 800);
+            });
+            mapa.on('moveend', () => {
+                document.getElementById('mapa-ontzia').classList.add('mapa-ezkutatu');
+                document.body.classList.add('edukia-ikusgai');
+                sessionStorage.setItem('mapaMostrado', 'true');
+            });
+        }
+
+        const timelineMugi = document.querySelector('.timeline-mugimendua');
+        const timelineAtala = document.querySelector('.timeline-mugagabea');
+        window.addEventListener('scroll', () => {
+            if (!document.body.classList.contains('edukia-ikusgai')) return;
+            const offsetTop = timelineAtala.offsetTop;
+            const scrollY = window.pageYOffset;
+            const sectionHeight = timelineAtala.offsetHeight;
+            if (scrollY >= offsetTop) {
+                let frac = (scrollY - offsetTop) / (sectionHeight - window.innerHeight);
+                frac = Math.max(0, Math.min(1, frac));
+                const maxMove = timelineMugi.scrollWidth - window.innerWidth;
+                timelineMugi.style.transform = `translate3d(-${frac * maxMove}px, 0, 0)`;
+            }
+        });
+
+        const behatzailea = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('aktibatuta'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.agertu').forEach(el => behatzailea.observe(el));
+    </script>
+</body>
+</html>

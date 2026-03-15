@@ -1,0 +1,74 @@
+.nabigazio-finkoa {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between; /* Logua ezkerraldien */
+    align-items: center;
+    z-index: 3000;
+    box-sizing: border-box;
+
+}
+
+.logo-marka {
+    font-family: 'Iroulegu', sans-serif;
+    color: #FA402C;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menua {
+   font-family: 'Iroulegu', sans-serif;
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menua :hover{color:#FA402C;}
+.menua a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* BOTÓN MÓVIL (Oculto en PC) */
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburguesa span {
+    width: 25px;
+    height: 3px;
+    background: black;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .hamburguesa { display: flex; }
+    
+    .menua {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 70%; height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+
+    .menua.irekita { right: 0; }
+    
+    .menu-overlay.irekita {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+    }
+}

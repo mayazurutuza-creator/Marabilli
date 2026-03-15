@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marabilliren Egitaraua</title>
+    
+    <link rel="stylesheet" href="marabilli_css/fonts.css">
+    <link rel="stylesheet" href="marabilli_css/egitaraua.css">
+    <link rel="stylesheet" href="marabilli_css/shop.css">
+    <link rel="stylesheet" href="marabilli_css/footer.css">
+    <link rel="stylesheet" href="marabilli_css/navegador.css">
+</head>
+<body>
+
+    <nav class="nabigazio-finkoa">
+        <div class="logo-marka">MARABILLI</div>
+        
+        <button class="hamburguesa" id="btn-hamburguesa" aria-label="Menua ireki">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="menua" id="menu-lista">
+            <li><a href="index.html">HASIERA</a></li>
+            <li><a href="partaideak.html">PARTAIDEAK</a></li>
+            <li><a href="egitaraua.html">EGITARAUA</a></li>
+            <li><a href="shop.html">DENDA</a></li>
+            <li><a href="kontaktuak.html">KONTAKTUAK</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-overlay" id="overlay"></div>
+
+    <main class="edukia" style="padding-top: 120px;"> <h1>EGITARAUA 2026</h1>
+
+        <div class="filtroak">
+            <button onclick="iragazi('denak', event)" class="aktiboa">Denak</button>
+            <button onclick="iragazi('15', event)">Urriak 15</button>
+            <button onclick="iragazi('16', event)">Urriak 16</button>
+            <button onclick="iragazi('17', event)">Urriak 17</button>
+        </div>
+
+        <div class="egutegia">
+            
+            <div class="eguna" id="eguna-15">
+                <div class="data-kutxa">
+                    <span class="zenbakia">15</span>
+                    <span class="hilabetea">URRIA</span>
+                </div>
+                <div class="ekintzak">
+                    <div class="ekintza-lerroa">
+                        <span class="ordua">18:30</span>
+                        <div class="xehetasunak">
+                            <strong>Zine-Emanaldia: "Marabillia"</strong>
+                            <p>Bideo-sorkuntza laburrak (Bide Onera)</p>
+                        </div>
+                    </div>
+                    <div class="ekintza-lerroa">
+                        <span class="ordua">22:00</span>
+                        <div class="xehetasunak">
+                            <strong>Aukustikoa: Izaro</strong>
+                            <p>Andra Mari Eliza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eguna" id="eguna-16">
+                <div class="data-kutxa">
+                    <span class="zenbakia">16</span>
+                    <span class="hilabetea">URRIA</span>
+                </div>
+                <div class="ekintzak">
+                    <div class="ekintza-lerroa">
+                        <span class="ordua">11:00</span>
+                        <div class="xehetasunak">
+                            <strong>Argazkigintza Tailerra</strong>
+                            <p>Alamedan zehar</p>
+                        </div>
+                    </div>
+                    <div class="ekintza-lerroa">
+                        <span class="ordua">23:00</span>
+                        <div class="xehetasunak">
+                            <strong>Kontzertua: Gatibu</strong>
+                            <p>Itsasaurre Plaza</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eguna" id="eguna-17">
+                <div class="data-kutxa">
+                    <span class="zenbakia">17</span>
+                    <span class="hilabetea">URRIA</span>
+                </div>
+                <div class="ekintzak">
+                    <div class="ekintza-lerroa">
+                        <span class="ordua">12:30</span>
+                        <div class="xehetasunak">
+                            <strong>Bertso-Bazkaria</strong>
+                            <p>Portuko kaian</p>
+                        </div>
+                    </div>
+                    <div class="ekintza-lerroa">
+                        <span class="ordua">00:00</span>
+                        <div class="xehetasunak">
+                            <strong>DJ Gaua: Amaiera</strong>
+                            <p>Plazapean</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        function iragazi(eguna, e) {
+            const egunak = document.querySelectorAll('.eguna');
+            
+            egunak.forEach(el => {
+                if (eguna === 'denak') {
+                    el.style.display = 'flex';
+                } else {
+                    el.style.display = el.id.includes(eguna) ? 'flex' : 'none';
+                }
+            });
+            
+            // Botoi aktiboaren estiloa aldatu
+            const botoiak = document.querySelectorAll('.filtroak button');
+            botoiak.forEach(btn => btn.classList.remove('aktiboa'));
+            e.currentTarget.classList.add('aktiboa');
+        }
+    </script>
+
+    <script>
+        const btn = document.getElementById('btn-hamburguesa');
+        const menu = document.getElementById('menu-lista');
+        const overlay = document.getElementById('overlay');
+
+        if (btn) {
+            btn.onclick = function() {
+                menu.classList.toggle('irekita');
+                btn.classList.toggle('aktibatuta');
+                overlay.classList.toggle('irekita');
+            }
+        }
+
+        if (overlay) {
+            overlay.onclick = function() {
+                menu.classList.remove('irekita');
+                btn.classList.remove('aktibatuta');
+                overlay.classList.remove('irekita');
+            }
+        }
+    </script>
+
+</body>
+
+<footer class="footer">
+  <div class="kutxa">
+    
+    <div class="atala">
+      <h4>NON GAUDE?</h4>
+      <p>&#9906; Aitaren Etxea, Ondarroa<br>Bizkaia, 48700</p>
+    </div>
+
+    <div class="atala">
+      <h4>KONTAKTUA</h4>
+      <p>&#9993; info@marabillifestibala.eus</p>
+      <p>&#9990; 630 898 689</p>
+    </div>
+
+    <div class="atala">
+  <h4>SAREAK</h4>
+  <div class="ikurrak">
+    <a href="https://www.instagram.com/marabillisormenfestibala/?hl=es" target="_blank" title="Instagram">&#128247;</a>
+    <a href="https://www.facebook.com/MarabilliSormenFestibala/?locale=es_ES" title="Facebook">&#120125;</a>
+    <a href="https://x.com/Marabilli1" title="X (Twitter)">&#120143;</a>
+  </div>
+</div>
+
+  </div>
+
+  <div class="behea">
+    <p>&copy; 2026 &bull; MARABILLI KULTUR ELKARTEA &bull; ONDARROA</p>
+  </div>
+</footer>
+
+</html>

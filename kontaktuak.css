@@ -1,0 +1,230 @@
+:root {
+    --atzealdea: #f0f0eb;
+    --akzentua: #FA402C;
+    --testua: #000000;
+    --feedback-ona: #21C2B2; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--atzealdea);
+    color: var(--testua);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- NAV --- */
+.nabigazio-finkoa {
+        font-family: "izenburuak", sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(240, 240, 235, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo-marka {
+    font-family: "izenburuak";
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--akzentua);
+    text-decoration: none;
+}
+
+.menua {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menua a {
+        font-family: "izenburuak", sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* --- FLEX LAYOUT --- */
+.kontaktu-nagusia {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.kontaktu-flex-container {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 85%;
+    max-width: 1200px;
+    gap: 60px;
+}
+
+.info-zutabea {
+    flex: 1 1 400px; 
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+.form-zutabea {
+    flex: 1 1 500px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* --- barne estiluak --- */
+.izenburu-handia {
+    font-family: "izenburuak", sans-serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.85;
+    color: var(--akzentua);
+    margin-bottom: 40px;
+    letter-spacing: -3px;
+}
+
+.testu-laguntzailea {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    max-width: 420px;
+}
+
+.xehetasun-zerrenda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--akzentua);
+    display: block;
+}
+
+.info-item p {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* --- FORMULARIOAAA --- */
+.form-txartela {
+    background: #ffffff;
+    padding: clamp(30px, 5%, 60px);
+    border-radius: 30px;
+    width: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+.input-taldea {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+
+.input-taldea label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.input-taldea input, 
+.input-taldea select, 
+.input-taldea textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    background: #fafafa;
+}
+
+.input-taldea input:focus, 
+.input-taldea textarea:focus {
+    border-color: var(--akzentua);
+    background: #fff;
+}
+
+.botoi-marabilli {
+    width: 100%;
+    background-color: var(--akzentua);
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-weight: 900;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.botoi-marabilli:hover {
+    background-color: #000;
+    transform: translateY(-3px);
+}
+
+/* --- FEEDBACK MEZUAK  --- */
+
+#feedback-mezua {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: none; /* Hasieran ezkutatuta */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Mezua ondo bidali denean (Success) */
+.success-msg {
+    background-color: rgba(33, 194, 178, 0.15);
+    color: var(--feedback-ona);
+    border: 2px solid var(--feedback-ona);
+}
+
+/* Errore bat gertatu denean (Error) */
+.error-msg {
+    background-color: rgba(250, 64, 44, 0.1);
+    color: var(--akzentua);
+    border: 2px solid var(--akzentua);
+}
+
+/* Botoia bidaltzen ari denean */
+.botoi-marabilli:disabled {
+    cursor: not-allowed;
+    background-color: #666;
+    transform: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .kontaktu-flex-container {
+        flex-direction: column;
+    }
+    .form-zutabea {
+        justify-content: center;
+    }
+}
